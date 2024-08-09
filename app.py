@@ -5,11 +5,8 @@ from langchain.schema import SystemMessage, HumanMessage, AIMessage
 os.environ['HUGGINGFACEHUB_API_TOKEN']="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"
 
 repo_id="openai-community/gpt2"
-# llm=HuggingFaceEndpoint(repo_id=repo_id, max_length=128, temperature=0.7,
-#                          token="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",max_new_tokens=500)
-# print(llm.invoke("What is machine learning"))
 
-
+#Initializing the chatbot page
 def init_page():
     st.set_page_config(
         page_title="Baymax 3.0",
@@ -45,7 +42,7 @@ def main():
             st.markdown(response)
         st.session_state.messages.append({"role":"assistant","content":response})
 
-
+#Calling Main function
 if __name__=="__main__":
     main()
 
