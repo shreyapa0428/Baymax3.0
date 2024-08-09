@@ -2,7 +2,7 @@ from langchain_huggingface import HuggingFaceEndpoint
 import os
 import streamlit as st
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
-os.environ['HUGGINGFACEHUB_API_TOKEN']="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"
+os.environ['HUGGINGFACEHUB_API_TOKEN']=""
 
 repo_id="openai-community/gpt2"
 
@@ -16,7 +16,7 @@ def init_page():
 
 def select_llm(repo_id):
     llm=HuggingFaceEndpoint(repo_id=repo_id, max_length=128, temperature=0.7,
-                         token="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",max_new_tokens=100, verbose=True)
+                         token="",max_new_tokens=100, verbose=True)
     return llm
 
 
